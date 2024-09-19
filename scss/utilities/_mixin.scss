@@ -1,0 +1,101 @@
+
+
+@mixin estilomenu {
+    .menu2 {
+        background-color: white;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        display: flex; /* Añadido para alinear los elementos en una fila */
+        align-items: center; /* Centra verticalmente los elementos */
+        justify-content: space-between; /* Alinea el menú y la imagen a los extremos del contenedor */
+        padding: 0 20px; /* Añadido para añadir espacio a los lados del contenedor */
+
+        .menu {
+            ul {
+                list-style: none;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+
+                li {
+                    font-size: 20px;
+                    text-align: center;
+                    margin: 0 10px;
+                    font-family: $fuente5 !important;
+
+                    a {
+                        color: $color1;
+                        text-decoration: none;
+                        font-size: 1.1em;
+                        font-weight: bold;
+
+                        &:hover {
+                            color: $color2;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Estilos para la imagen del carrito
+        .carrito {
+            width: 40px; /* Tamaño inicial del carrito */
+            margin-left: 20px; /* Separación del borde izquierdo */
+        }
+
+        @media (max-width: $medida3) { // 768px
+            .menu ul {
+                flex-direction: column;
+                li {
+                    margin: 5px 0;
+                }
+            }
+            .carrito {
+                width: 30px; /* Tamaño del carrito para pantallas medianas */
+            }
+        }
+
+        @media (max-width: $medida2) { // 576px
+            .menu ul {
+                li {
+                    font-size: 18px;
+                }
+            }
+            .carrito {
+                width: 25px; /* Tamaño del carrito para pantallas pequeñas */
+            }
+        }
+
+        @media (max-width: $medida1) { // 480px
+            .menu ul {
+                li {
+                    font-size: 16px;
+                }
+            }
+            .carrito {
+                width: 20px; /* Tamaño del carrito para pantallas muy pequeñas */
+            }
+        }
+    }
+}
+
+.cantidad-carrito{
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 4px;
+    top: 35px;
+    right:  14px;
+    position: absolute;
+    display: none;
+}
+
+.sumar{
+    cursor: pointer;
+}
+
+.restar{
+    cursor: pointer;
+}

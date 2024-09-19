@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "nombre": "LA DISTANCIA QUE NOS SEPARA",
+        "autor": "Maggie OFarrell",
+        "precio": 1090,
+        "img": "../assets/libros/libro1.png",
+        "cantidad": 1
+    },
+    {
+        "id": 2,
+        "nombre": "CUENTOS OSCUROS",
+        "autor": "Shirley Jackson",
+        "precio": 1290,
+        "img": "../assets/libros/libro2.png",
+        "cantidad": 1
+    },
+    {
+        "id": 3,
+        "nombre": "LA PORTADORA DEL CIELO",
+        "autor": "Rikka Pelo",
+        "precio": 790,
+        "img": "../assets/libros/libro3.png",
+        "cantidad": 1
+    },
+    {
+        "id": 4,
+        "nombre": "EL MUNDO DE LAS ABEJAS",
+        "autor": "Cristina Banfi/Giulia De Amicis",
+        "precio": 1090,
+        "img": "../assets/libros/libro4.png",
+        "cantidad": 1
+    },
+    {
+        "id": 5,
+        "nombre": "PRECOZ",
+        "autor": "PRECOZ",
+        "precio": 790,
+        "img": "../assets/libros/libro5.png",
+        "cantidad": 1
+    },
+    {
+        "id": 6,
+        "nombre": "¿QUÉ SABEN HACER LOS GATOS?",
+        "autor": "Abner Graboff",
+        "precio": 890,
+        "img": "../assets/libros/libro6.png",
+        "cantidad": 1
+    }
+]

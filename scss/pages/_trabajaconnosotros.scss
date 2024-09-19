@@ -1,0 +1,104 @@
+
+
+body {
+    .trabaja-con-nosotros {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+
+        h2 {
+            font-family: $fuente3;
+            font-size: 30px;
+            text-align: center;
+            color: $color2;
+            margin: 40px auto;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+            border: 1px $color1;
+            margin: 50px 0;
+            padding: 20px;
+            box-sizing: border-box;
+
+            div {
+                width: 100%;
+                margin-bottom: 15px;
+
+                p, label {
+                    font-family: '';
+                    font-size: 20px;
+                }
+
+                input, .form-check-input, .form-control {
+                    width: 100%;
+                }
+
+                .dropdown {
+                    width: 100%;
+                }
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@include medida3 {
+    body {
+        main {
+            form {
+                padding: 10px;
+
+                div {
+                    p, label {
+                        font-size: 18px;
+                    }
+
+                    input, .form-check-input, .form-control {
+                        font-size: 16px;
+                    }
+                }
+
+                .btn {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+@include medida2 {
+    body {
+        main {
+            h2 {
+                font-size: 24px;
+            }
+
+            form {
+                padding: 5px;
+
+                div {
+                    p, label {
+                        font-size: 16px;
+                    }
+
+                    input, .form-check-input, .form-control {
+                        font-size: 14px;
+                    }
+                }
+
+                .btn {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

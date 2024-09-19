@@ -1,0 +1,567 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+NG+Modern:wght@100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+NG+Modern:wght@100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+NG+Modern:wght@100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Calistoga&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+NG+Modern:wght@100..400&family=Quicksand:wght@300..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cantidad-carrito {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  padding: 4px;
+  top: 35px;
+  right: 14px;
+  position: absolute;
+  display: none;
+}
+
+.sumar {
+  cursor: pointer;
+}
+
+.restar {
+  cursor: pointer;
+}
+
+header .div1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 50px 0;
+}
+header .div1 h1 {
+  font-family: "Playfair Display", italic;
+  text-align: center;
+  color: black;
+  margin: auto;
+  font-size: 40px;
+}
+header .div1 .logo3 {
+  width: 10vh;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+@media (max-width: 480px) {
+  header .div1 .logo3 {
+    align-self: center;
+    width: 3vh;
+    height: auto;
+  }
+}
+
+.menu2 {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex; /* Añadido para alinear los elementos en una fila */
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: space-between; /* Alinea el menú y la imagen a los extremos del contenedor */
+  padding: 0 20px; /* Añadido para añadir espacio a los lados del contenedor */
+}
+.menu2 .menu ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.menu2 .menu ul li {
+  font-size: 20px;
+  text-align: center;
+  margin: 0 10px;
+  font-family: "EB Garamond", serif !important;
+}
+.menu2 .menu ul li a {
+  color: rgb(129, 26, 45);
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.menu2 .menu ul li a:hover {
+  color: rgb(175, 76, 94);
+}
+.menu2 .carrito {
+  width: 40px; /* Tamaño inicial del carrito */
+  margin-left: 20px; /* Separación del borde izquierdo */
+}
+@media (max-width: 768px) {
+  .menu2 .menu ul {
+    flex-direction: column;
+  }
+  .menu2 .menu ul li {
+    margin: 5px 0;
+  }
+  .menu2 .carrito {
+    width: 30px; /* Tamaño del carrito para pantallas medianas */
+  }
+}
+@media (max-width: 576px) {
+  .menu2 .menu ul li {
+    font-size: 18px;
+  }
+  .menu2 .carrito {
+    width: 25px; /* Tamaño del carrito para pantallas pequeñas */
+  }
+}
+@media (max-width: 480px) {
+  .menu2 .menu ul li {
+    font-size: 16px;
+  }
+  .menu2 .carrito {
+    width: 20px; /* Tamaño del carrito para pantallas muy pequeñas */
+  }
+}
+
+.imagen {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  top: 0px;
+}
+
+.portada {
+  background-color: rgb(129, 26, 45);
+  width: 100%;
+  margin: 0px;
+  padding: 1%;
+}
+.portada h2 {
+  font-family: "Playfair Display", italic;
+  text-align: center;
+  color: white;
+}
+
+.logo {
+  width: 10%;
+  height: auto;
+  display: block;
+  margin-top: 0%;
+  margin-right: 5%;
+}
+
+.grid1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 0;
+}
+.grid1 p {
+  font-family: "Crimson Text", serif;
+  font-size: 25px;
+  color: rgb(129, 26, 45);
+}
+.grid1 .grid1-item {
+  border: 2px solid black;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.grid1 .grid1-item:hover {
+  transform: scale(1.1);
+}
+.grid1 .grid1-item img {
+  max-width: 100%;
+  height: auto;
+}
+.grid1 .grid1-item h3 {
+  margin: 10px 0;
+  font-family: "Crimson Text", serif;
+}
+.grid1 .grid1-item h3:hover {
+  color: rgb(175, 76, 94);
+}
+@media (max-width: 480px) {
+  .grid1 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 576px) {
+  .grid1 {
+    grid-template-columns: 1fr;
+  }
+}
+
+footer .gridfooter {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Columnas flexibles que se ajustan al tamaño del contenedor */
+  gap: 10px;
+  padding: 20px;
+  background-color: rgb(129, 26, 45);
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0; /*margin: -30px auto -40px -10px;*/
+}
+footer .gridfooter .grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px; /* Altura de 300px */
+}
+footer .gridfooter .grid-item img {
+  max-width: 50%;
+  max-height: 50%;
+  width: auto;
+  height: auto;
+  /*margin: 10%;*/
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+footer .gridfooter .grid-item:hover img {
+  transform: scale(1.2);
+}
+footer .gridfooter .grid-item ul {
+  list-style-type: none; /* Sin viñetas */
+  padding: 0;
+  transition: transform 0.3s ease;
+}
+footer .gridfooter .grid-item ul li {
+  padding: 5px 0; /* Espaciado entre los elementos de la lista */
+  color: white; /* Color del texto */
+}
+footer .gridfooter .grid-item ul li a {
+  color: white;
+  text-decoration: none;
+  font-family: "Playfair Display", italic;
+}
+footer .gridfooter .grid-item ul li a:hover {
+  color: rgb(49, 9, 16);
+  transform: scale(1.2);
+}
+
+/* CONTENIDO MODAL */
+.modal-container {
+  width: 80%;
+  margin: 0 10%;
+  max-height: 88vh;
+  color: beige;
+  background-color: rgb(129, 26, 45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  overflow: auto;
+  z-index: 9;
+  top: 12vh;
+  scrollbar-color: none;
+  z-index: 9999;
+}
+.modal-container::-webkit-scrollbar {
+  display: none;
+}
+.modal-container h3 {
+  font-size: 20px;
+}
+.modal-container .modal-header {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(49, 9, 16);
+  color: beige;
+  width: 100%;
+}
+.modal-container .modal-header .modal-header-title {
+  justify-self: start;
+  font-family: "Crimson Text", serif;
+}
+.modal-container .modal-header .modal-header-button {
+  cursor: pointer;
+  font-family: "Crimson Text", serif;
+}
+.modal-container .modal-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  margin: 10px;
+  font-family: "Crimson Text", serif;
+  font-size: 15px;
+}
+.modal-container .modal-content img {
+  height: 120px;
+  width: 120px;
+}
+.modal-container .total-content {
+  font-size: 25px;
+  padding: 20px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.delete-product {
+  cursor: pointer;
+}
+
+.btn-vaciar {
+  font-family: "Crimson Text", serif;
+  background-color: rgb(175, 76, 94);
+}
+
+main .menu2 {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex; /* Añadido para alinear los elementos en una fila */
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: space-between; /* Alinea el menú y la imagen a los extremos del contenedor */
+  padding: 0 20px; /* Añadido para añadir espacio a los lados del contenedor */
+}
+main .menu2 .menu ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+main .menu2 .menu ul li {
+  font-size: 20px;
+  text-align: center;
+  margin: 0 10px;
+  font-family: "EB Garamond", serif !important;
+}
+main .menu2 .menu ul li a {
+  color: rgb(129, 26, 45);
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+main .menu2 .menu ul li a:hover {
+  color: rgb(175, 76, 94);
+}
+main .menu2 .carrito {
+  width: 40px; /* Tamaño inicial del carrito */
+  margin-left: 20px; /* Separación del borde izquierdo */
+}
+@media (max-width: 768px) {
+  main .menu2 .menu ul {
+    flex-direction: column;
+  }
+  main .menu2 .menu ul li {
+    margin: 5px 0;
+  }
+  main .menu2 .carrito {
+    width: 30px; /* Tamaño del carrito para pantallas medianas */
+  }
+}
+@media (max-width: 576px) {
+  main .menu2 .menu ul li {
+    font-size: 18px;
+  }
+  main .menu2 .carrito {
+    width: 25px; /* Tamaño del carrito para pantallas pequeñas */
+  }
+}
+@media (max-width: 480px) {
+  main .menu2 .menu ul li {
+    font-size: 16px;
+  }
+  main .menu2 .carrito {
+    width: 20px; /* Tamaño del carrito para pantallas muy pequeñas */
+  }
+}
+main .imagen {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  top: 0px;
+}
+main .portada {
+  background-color: rgb(129, 26, 45);
+  width: 100%;
+  margin: 0px;
+  padding: 1%;
+}
+main .portada h2 {
+  font-family: "Playfair Display", italic;
+  text-align: center;
+  color: white;
+}
+main .logo {
+  width: 10%;
+  height: auto;
+  display: block;
+  margin-top: 0%;
+  margin-right: 5%;
+}
+main .grid1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 0;
+}
+main .grid1 p {
+  font-family: "Crimson Text", serif;
+  font-size: 25px;
+  color: rgb(129, 26, 45);
+}
+main .grid1 .grid1-item {
+  border: 2px solid black;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+main .grid1 .grid1-item:hover {
+  transform: scale(1.1);
+}
+main .grid1 .grid1-item img {
+  max-width: 100%;
+  height: auto;
+}
+main .grid1 .grid1-item h3 {
+  margin: 10px 0;
+  font-family: "Crimson Text", serif;
+}
+main .grid1 .grid1-item h3:hover {
+  color: rgb(175, 76, 94);
+}
+@media (max-width: 480px) {
+  main .grid1 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 576px) {
+  main .grid1 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.menu2 {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex; /* Añadido para alinear los elementos en una fila */
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: space-between; /* Alinea el menú y la imagen a los extremos del contenedor */
+  padding: 0 20px; /* Añadido para añadir espacio a los lados del contenedor */
+}
+.menu2 .menu ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.menu2 .menu ul li {
+  font-size: 20px;
+  text-align: center;
+  margin: 0 10px;
+  font-family: "EB Garamond", serif !important;
+}
+.menu2 .menu ul li a {
+  color: rgb(129, 26, 45);
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.menu2 .menu ul li a:hover {
+  color: rgb(175, 76, 94);
+}
+.menu2 .carrito {
+  width: 40px; /* Tamaño inicial del carrito */
+  margin-left: 20px; /* Separación del borde izquierdo */
+}
+@media (max-width: 768px) {
+  .menu2 .menu ul {
+    flex-direction: column;
+  }
+  .menu2 .menu ul li {
+    margin: 5px 0;
+  }
+  .menu2 .carrito {
+    width: 30px; /* Tamaño del carrito para pantallas medianas */
+  }
+}
+@media (max-width: 576px) {
+  .menu2 .menu ul li {
+    font-size: 18px;
+  }
+  .menu2 .carrito {
+    width: 25px; /* Tamaño del carrito para pantallas pequeñas */
+  }
+}
+@media (max-width: 480px) {
+  .menu2 .menu ul li {
+    font-size: 16px;
+  }
+  .menu2 .carrito {
+    width: 20px; /* Tamaño del carrito para pantallas muy pequeñas */
+  }
+}
+
+.buscar {
+  font-family: "Crimson Text", serif;
+  background-color: white;
+  position: sticky;
+  top: 33px;
+  z-index: 1000;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+@media (max-width: 768px) {
+  .buscar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    top: 216px;
+  }
+}
+@media (max-width: 576px) {
+  .buscar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    top: 199px;
+  }
+}
+@media (max-width: 480px) {
+  .buscar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    top: 182px;
+  }
+}
+
+.cajalibros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cajalibros .tituloformulario {
+  font-family: "Playfair Display", italic;
+  color: rgb(175, 76, 94);
+  align-items: center;
+}
+.cajalibros .categorias {
+  font-family: "Playfair Display", italic;
+  align-items: center;
+}
+
+/* Estilos vinilo-container */
+.vinilos-container {
+  padding: 20px;
+  margin: 100px;
+}
+@media (max-width: 768px) {
+  .vinilos-container {
+    margin: 50px 10px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

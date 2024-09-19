@@ -1,0 +1,31 @@
+header {
+
+    
+    .div1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 50px 0;
+
+        h1 {
+            font-family: $fuente3;
+            text-align: center;
+            color: black;
+            margin: auto;
+            font-size: 40px;
+        }
+
+        .logo3 {
+            width: 10vh;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            @media (max-width:#{$medida1}){
+                align-self: center;
+                width: 3vh;
+                height: auto;
+            }
+        }
+
+    }
+}
+

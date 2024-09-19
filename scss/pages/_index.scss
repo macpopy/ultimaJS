@@ -1,0 +1,91 @@
+
+main{
+
+
+    
+    @include estilomenu;
+
+    .imagen {
+        width: 100%;
+        height: auto;
+        display: block;
+        position: relative;
+        top: 0px;
+
+    }
+    
+    .portada {
+        background-color: $color1;
+        width: 100%;
+        margin: 0px;
+        padding: 1%;
+    
+        h2 {
+            font-family: $fuente3;
+            text-align: center;
+            color: white;
+        }
+    }
+    
+    .logo {
+        width: 10%;
+        height: auto;
+        display: block;
+        margin-top: 0%;
+        margin-right: 5%;
+    }
+    
+    
+    .grid1 {
+        
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        padding: 0;
+
+
+        p {
+            font-family: $fuente2;
+            font-size: 25px;
+            color: $color1;
+        }
+    
+    
+        .grid1-item {
+            border: 2px solid black;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s ease;
+    
+            &:hover {
+                transform: scale(1.1);
+            }
+    
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+    
+            h3 {
+                margin: 10px 0;
+                font-family: $fuente2;
+
+    
+                &:hover {
+                    color: $color2;
+                }
+            }
+        }
+        @media (max-width:#{$medida1}){
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (max-width:#{$medida2}){
+            grid-template-columns: 1fr;
+        }
+    }
+
+}

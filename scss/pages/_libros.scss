@@ -1,0 +1,68 @@
+
+@include estilomenu;
+
+//Estilos particulares de los libros
+
+.buscar {
+    font-family: $fuente2;
+    background-color: white;
+    position: sticky;
+    top: 33px;
+    z-index: 1000;
+    margin: 20px auto;
+    padding: 0 20px;
+
+    @media (max-width:#{$medida3}){
+        display: flex;
+        align-items: center; 
+        justify-content: center;   
+        width: 100%;
+        top: 216px;
+    }
+
+    @media (max-width:#{$medida2}){
+        display: flex;
+        align-items: center; 
+        justify-content: center;   
+        width: 100%;
+        top: 199px;
+    }
+
+    @media (max-width:#{$medida1}){
+        display: flex;
+        align-items: center; 
+        justify-content: center;   
+        width: 100%;
+        top: 182px;
+    }
+}
+
+.cajalibros{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .tituloformulario{
+        font-family: $fuente3;
+        color: $color2;
+        align-items: center;
+    
+    }
+    
+    .categorias{
+        font-family: $fuente3;
+        align-items: center;
+    }
+    
+}
+
+/* Estilos vinilo-container */
+.vinilos-container {
+    padding: 20px;
+    margin: 100px;
+
+    @media (max-width:#{$medida3}){
+        margin: 50px 10px;
+
+    }
+}
